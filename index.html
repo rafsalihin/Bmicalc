@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Body Mass Index Calculator</title>
+  <link rel="stylesheet" media="screen" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Body Mass Index Calculator</h1>
+    <nav>
+      <table class="center-table">
+        <tr>
+          <td><a href="index.html">Home</a></td>
+          <td><a href="profile.html">Profile</a></td>
+        </tr>
+      </table>
+    </nav>
+  </header>
+
+  <main><br>
+    <h3>About BMI</h3>
+    <div class="table-container">
+      <table class="instructions">
+        <tr>
+          <td>
+            <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
+          </td>
+        </tr>
+        <tr><td><b>Instructions:</b></td></tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Enter your <b>weight</b> and <b>height</b> according to correct unit.</li>
+              <li>For <b>metric</b> use <b>centimeter(cm)</b> and <b>kilogram(kg).</b></li>
+              <li>For <b>imperial</b> use <b>inches(in)</b> and <b>pounds(lbs).</b></li>
+              <li>Select <b>"Calculate"</b> and your BMI will appear below.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <table class="bmi_range">
+        <tr>
+          <th>BMI Categories</th>
+          <th>BMI Range</th>
+        </tr>
+        <tr>
+          <td>Underweight</td>
+          <td>&lt; 18.5</td>
+        </tr>
+        <tr>
+          <td>Normal weight</td>
+          <td>18.5 - 24.9</td>
+        </tr>
+        <tr>
+          <td>Overweight</td>
+          <td>25 - 29.9</td>
+        </tr>
+        <tr>
+          <td>Obesity</td>
+          <td>&gt;= 30</td>
+        </tr>
+      </table>
+    </div><br>
+    <div class="table-container">
+    <form class="bmi_form" id="bmi_form">
+      <table class="center-table">
+        <th class="center-text" colspan="2">Calculate your BMI</th>
+        <tr><td>&nbsp</td></tr>
+        <tr>
+          <td>
+            <label for="name">Name:</label>
+          </td>
+          <td>
+            <input type="text" id="name" name="name" placeholder="Your name" required > *
+            <span class="form_hint">Please enter name.</span>
+          </td>
+        </tr>
+        <tr>    
+          <td>
+            <label for="age">Age:</label>
+          </td>
+          <td>
+            <input type="number" id="age" name="age" placeholder="Your age" required min="0" pattern="[0-9]+">*
+            <span class="form_hint">Please enter age.</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="gender">Gender:</label>
+          </td>
+          <td>
+            <label>
+              <input type="radio" name="gender" id="male" value="male" required> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" id="female" value="female" required> Female
+            </label>*
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email:</label>
+          </td>
+          <td>
+            <input type="email" id="email" name="email" placeholder="Your email" required>*
+            <span class="form_hint">Please enter email.</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label id="height unit"for="height">Height:</label>
+          </td>
+          <td>
+            <input type="number" id="height" name="height" placeholder="Your height" min="0" required pattern="[0-9]+(\.[0-9]+)?">*
+            <span id="popup-text" class="form_hint">Please enter valid height.</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label id="weight unit" for="weight">Weight:</label>
+          </td>
+          <td>
+            <input type="number" id="weight" name="weight" placeholder="Your weight" min="0" required pattern="[0-9]+(\.[0-9]+)?">*
+            <span class="form_hint">Please enter valid weight.</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="unit">Unit:</label>
+          </td>
+          <td>
+            <label>
+              <input type="radio" name="unit" id="metric" value="metric" required> Metric
+            </label>
+            <label>
+              <input type="radio" name="unit" id="imperial" value="imperial" required> Imperial
+            </label>*
+          </td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td><label for="sleep">Amount of Sleep (hours):</label></td><td>
+            <select id="sleep" name="sleep" required>
+              <option value="placeholder" disabled selected>Select sleep duration</option>
+              <option value="less than 4">Less than 4</option>
+              <option value="4-6">4 - 6</option>
+              <option value="6-8">6 - 8</option>
+              <option value="8-10">8 - 10</option>
+              <option value="more than 10">More than 10</option>
+            </select>*</td>
+        </tr>
+        <tr><td>&nbsp</td></tr>
+        <tr>
+          <td colspan="2">
+            <label for="cond">Please check any conditions that apply to you:</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="diabetes">Diabetes:</label></td>
+          <td><input type="checkbox" id="cond1" name="conditions" value="diabetes"></td>
+        </tr>
+        <tr>
+          <td><label for="high-blood-pressure">High blood pressure:</label></td>
+          <td><input type="checkbox" id="cond2" name="conditions" value="high blood pressure"></td>
+        </tr>
+        <tr>
+          <td><label for="heart-disease">Heart disease:</label></td>
+          <td><input type="checkbox" id="cond3" name="conditions" value="heart disease"></td>
+        </tr>
+        <tr>
+          <td><label for="high-cholesterol">High cholesterol:</label></td>
+          <td><input type="checkbox" id="cond4" name="conditions" value="high cholesterol"></td>
+        </tr>
+        <tr>
+          <td><label for="other-condition">Other:</label></td>
+          <td><input type="text" id="other-condition" name="other-condition" placeholder="Specify other condition"></td>        </tr>
+        <tr>
+          <td class="submit_button" colspan="2"><br>
+            <button type="submit">Calculate</button>
+            <button id="clear-button" type="button">Clear</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+      <table class="result">
+        <th class="center-text" >Result:</th>
+        <tr>
+          <td>
+              <div id="result"></div>
+          </td>
+        </tr>      
+      </table>
+    </div>
+    <br>
+
+    <br>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Body Mass Index Calculator. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

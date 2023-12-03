@@ -1,0 +1,206 @@
+/*header stuff*/
+header {
+  text-align: center;
+  background-color: #333;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  color: #fff;
+  padding: 20px;
+}
+
+main {
+  background-color: aliceblue;
+  text-align: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #333; 
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  color: #fff; 
+  padding: 20px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+select {
+  border-radius:5px;
+  min-width: 87% ;
+}
+
+label {
+  text-align: center;
+  font-size: 18px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+}
+
+html {
+  background-color: cornsilk;
+}
+
+body {
+  font: 18px "Lucida Sans";
+}
+
+.center-text{
+  text-align: center;
+  vertical-align: top;
+}
+
+.center-table {
+  margin: 0 auto;
+}
+
+table {
+  width: 400px;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.submit_button {
+  text-align: center;
+}
+
+.profilepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilepic img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+button {
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: cornsilk;
+  color: black;
+}
+
+button:active {
+  background-color: cadetblue;
+}
+
+button:focus {
+  outline: none;
+}
+
+.table-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.instructions {
+  margin: 0 auto;
+  width: 350px;
+  font-size: 16px;
+}
+
+.instructions td {
+  text-align: justify;
+}
+
+.bmi_range {
+  margin: 0 auto;
+  width: 350px;
+  font-size: 16px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.bmi_range td, .bmi_range th {
+  text-align: justify;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.popup-text {
+  display: none;
+  position: absolute;
+}
+
+.form_hint {
+  font-size: 12px;
+  background: #d45252;
+  border-radius: 3px;
+  color: white;
+  position: absolute;
+  padding: 1px 6px;
+  margin-left: 8px;
+  display: none;
+}
+
+.form_hint_true {
+  font-size: 12px;
+  background: #28921f;
+  border-radius: 3px;
+  color: white;
+  padding: 1px 6px;
+  margin-left: 8px;
+  display: none;
+}
+
+.form_hint::before {
+  content: "\25C0";
+  color: #d45252;
+  margin-right: 4px;
+}
+
+.form_hint_true::before {
+  content: "\25C0";
+  color: #d45252;
+  margin-right: 4px;
+}
+
+.bmi_form{
+  text-align: left;
+}
+.bmi_form label{
+  font-size: 16px;
+}
+.bmi_form input:focus:required:invalid + .form_hint {
+  display: inline;
+}
+
+.bmi_form input:required:valid + .form_hint {
+  display: none;
+}
+
+.bmi_form input:focus:invalid,
+.bmi_form textarea:focus:invalid {
+  box-shadow: 0 0 5px #d45252;
+  border-color: #b03535;
+}
+
+.bmi_form input:focus:valid,
+.bmi_form textarea:required:valid {
+  box-shadow: 0 0 10px #5cd053;
+  border-color: #28921f;
+}
+
+.result  td{
+  text-align: justify;
+  vertical-align: top;
+  font-size: 16px;
+}
